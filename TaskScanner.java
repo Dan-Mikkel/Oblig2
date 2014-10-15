@@ -121,7 +121,7 @@ public class TaskScanner {
 
         Task t = allTasks[i];
         System.out.println("TaskID: " + t.getID() + ". Task name: " + t.getName()+ ". Dependencies:");
-        Task[] dependencies = t.getDependencyEdges().toArray(new Task[0]);
+        Task[] dependencies = t.getDependencyEdges();
         System.out.print("\t");
 
         for (int j = 0; j < dependencies.length; j++) {

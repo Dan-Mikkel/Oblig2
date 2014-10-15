@@ -8,6 +8,7 @@ public class Task {
   private LinkedList<Task> dependencyEdges, outEdges;
   private boolean completedStatus = false, canStart = false;
   private int[] dependencies;
+  private boolean hasBeenVisited = false;
 
   public Task(int id) {
 
@@ -76,5 +77,11 @@ public class Task {
   public boolean canStart() {return this.canStart;}
 
   public boolean isCritical() {return (this.getSlack() == 0);}
+
+  public void visit() {this.hasBeenVisited = true;}
+
+  public void leave() {this.hasBeenVisited = false;}
+
+  public boolean hasBeenVisited() {return this.hasBeenVisited;}
 
 }
