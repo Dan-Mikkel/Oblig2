@@ -5,8 +5,9 @@ public class Task {
   private int id, estimatedTime, estimatedStaff;
   private String name;
   private int earliestStart = -1, latestStart = -1;
-  private LinkedList<Task> dependencyEdges = new LinkedList<Task>(), outEdges = new LinkedList<Task>();
+  private LinkedList<Task> dependencyEdges, outEdges;
   private boolean completedStatus = false, canStart = false;
+  private int[] dependencies;
 
   public Task(int id) {
 
@@ -14,19 +15,20 @@ public class Task {
     this.estimatedTime = -1;
     this.estimatedStaff = -1;
     this.name = null;
-    this.dependencyEdges = null;
-    this.outEdges = null;
+    this.dependencyEdges = new LinkedList<Task>();
+    this.outEdges = new LinkedList<Task>();
 
   }
 
-  public Task(int id, int estimatedTime, int estimatedStaff, String name, LinkedList<Task> dependencyEdges, LinkedList<Task> outEdges) {
+  public Task(int id, int estimatedTime, int estimatedStaff, String name, int[] dependencies) {
 
     this.id = id;
     this.estimatedTime = estimatedTime;
     this.estimatedStaff = estimatedStaff;
     this.name = name;
-    this.dependencyEdges = dependencyEdges;
-    this.outEdges = outEdges;
+    this.dependencies = dependencies;
+    this.dependencyEdges = new LinkedList<Task>();
+    this.outEdges = new LinkedList<Task>();
 
   }
 
@@ -36,9 +38,11 @@ public class Task {
 
   public void setName(String name) {this.name = name;}
 
+  public void setDependencies(int[] dependencies) {this.dependencies = dependencies;}
+
   public void addDependencyEdge(Task task) {this.dependencyEdges.add(task);}
 
-  public void addOutEdges(Task task) {this.outEdges.add(task);}
+  public void addOutEdge(Task task) {this.outEdges.add(task);}
 
   public void setStartTimes(int[] startTimes) {
 
@@ -55,13 +59,15 @@ public class Task {
 
   public String getName() {return this.name;}
 
+  public int[] getDependencies() {return this.dependencies;}
+
   public int getEarliestStart() {return this.earliestStart;}
 
   public int getLatestStart() {return this.latestStart;}
 
-  public LinkedList<Task> getDependencyEdges() {return this.dependencyEdges;}
+  public Task[] getDependencyEdges() {return this.dependencyEdges.toArray(new Task[0]);}
 
-  public LinkedList<Task> getOutEdges() {return this.outEdges;}
+  public Task[] getOutEdges() {return this.outEdges.toArray(new Task[0]);}
 
   public int getSlack() {return this.latestStart-this.earliestStart;}
 
