@@ -9,12 +9,13 @@ public class Task {
   private boolean completedStatus = false, canStart = false;
   private int[] dependencies;
   private boolean hasBeenVisited = false;
+  private boolean hasBeenStarted = false;
 
   public Task(int id) {
 
     this.id = id;
-    this.estimatedTime = -1;
-    this.estimatedStaff = -1;
+    this.estimatedTime = 0;
+    this.estimatedStaff = 0;
     this.name = null;
     this.dependencyEdges = new LinkedList<Task>();
     this.outEdges = new LinkedList<Task>();
@@ -64,7 +65,11 @@ public class Task {
 
   public int getEarliestStart() {return this.earliestStart;}
 
+  public void setEarliestStart(int earliestStart) {this.earliestStart = earliestStart;}
+
   public int getLatestStart() {return this.latestStart;}
+
+  public void setLatestStart(int latestStart) {this.latestStart = latestStart;}
 
   public Task[] getDependencyEdges() {return this.dependencyEdges.toArray(new Task[0]);}
 
@@ -83,5 +88,33 @@ public class Task {
   public void leave() {this.hasBeenVisited = false;}
 
   public boolean hasBeenVisited() {return this.hasBeenVisited;}
+
+  public void tick(int time) {
+
+    int timeThisTaskIsDone = this.estimatedTime+this.earliestStart;
+
+    if (time == this.earliestStart && !this.hasBeenStarted) {
+
+      System.out.println("\tStarting: " + this.id);
+      this.hasBeenStarted = true;
+      return;
+
+    } else if (time >= timeThisTaskIsDone) {
+
+      if (time == timeThisTaskIsDone) System.out.println("\tFinished: " + this.id);
+
+      for (Task t : this.outEdges) {
+        t.tick(time);
+      }
+
+      return;
+
+    } else {
+
+      return;
+
+    }
+
+  }
 
 }
