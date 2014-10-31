@@ -20,7 +20,7 @@ public class TaskManager {
 
     }
 
-    taskTree.leave();
+    taskTree.leaveAll();
 
     int totalTime = this.findCriticalPath(this.taskTree);
     optimizeTasksOnTime(taskTree);
@@ -30,6 +30,8 @@ public class TaskManager {
 
       System.out.println("Tick " + i + ":");
       taskTree.tick(i++);
+
+      System.out.println("Number of workers on project: " + Task.nWorkers);
 
       System.out.println("----------------\n");
 
@@ -227,7 +229,7 @@ public class TaskManager {
   public void printAllTasks() {
 
     this.taskTree.printAllInfo();
-    this.taskTree.leave();
+    this.taskTree.leaveAll();
 
   }
 

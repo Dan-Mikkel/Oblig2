@@ -11,6 +11,8 @@ public class Task {
   private boolean hasBeenVisited = false;
   private boolean hasBeenStarted = false;
   private boolean isCritical = false;
+  private boolean finished = false;
+  public static int nWorkers = 0;
 
   public Task(int id) {
 
@@ -92,7 +94,13 @@ public class Task {
   public void leave() {
 
     this.hasBeenVisited = false;
-    for (Task t : this.getOutEdges()) t.leave();
+
+  }
+
+  public void leaveAll() {
+
+    this.hasBeenVisited = false;
+    for (Task t : this.getOutEdges()) t.leaveAll();
 
   }
 
@@ -106,11 +114,21 @@ public class Task {
 
       System.out.println("\tStarting: " + this.id);
       this.hasBeenStarted = true;
+      nWorkers += this.estimatedStaff;
+
+      for (Task t : this.outEdges) {
+        t.tick(time);
+      }
+
       return;
 
     } else if (time >= timeThisTaskIsDone) {
 
-      if (time == timeThisTaskIsDone) System.out.println("\tFinished: " + this.id);
+      if (time == timeThisTaskIsDone && !finished) {
+        System.out.println("\tFinished: " + this.id);
+        nWorkers -= this.estimatedStaff;
+        this.finished = true;
+      }
 
       for (Task t : this.outEdges) {
         t.tick(time);
