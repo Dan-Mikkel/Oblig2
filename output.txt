@@ -1,0 +1,1390 @@
+Starting task manager for: buildhouse1.txt
+Tick 0:
+	Starting: 0
+	Starting: 5
+Number of workers on project: 2
+----------------
+
+Tick 1:
+Number of workers on project: 2
+----------------
+
+Tick 2:
+Number of workers on project: 2
+----------------
+
+Tick 3:
+Number of workers on project: 2
+----------------
+
+Tick 4:
+	Finished: 5
+	Starting: 1
+	Starting: 6
+Number of workers on project: 4
+----------------
+
+Tick 5:
+Number of workers on project: 4
+----------------
+
+Tick 6:
+	Finished: 6
+Number of workers on project: 2
+----------------
+
+Tick 7:
+Number of workers on project: 2
+----------------
+
+Tick 8:
+	Finished: 1
+	Starting: 2
+Number of workers on project: 4
+----------------
+
+Tick 9:
+Number of workers on project: 4
+----------------
+
+Tick 10:
+Number of workers on project: 4
+----------------
+
+Tick 11:
+Number of workers on project: 4
+----------------
+
+Tick 12:
+Number of workers on project: 4
+----------------
+
+Tick 13:
+Number of workers on project: 4
+----------------
+
+Tick 14:
+	Finished: 2
+	Starting: 3
+	Starting: 4
+	Starting: 7
+Number of workers on project: 7
+----------------
+
+Tick 15:
+	Finished: 3
+	Finished: 4
+Number of workers on project: 2
+----------------
+
+Tick 16:
+Number of workers on project: 2
+----------------
+
+Tick 17:
+Number of workers on project: 2
+----------------
+
+Tick 18:
+	Starting: 8
+	Finished: 7
+Number of workers on project: 4
+----------------
+
+Tick 19:
+Number of workers on project: 4
+----------------
+
+Tick 20:
+Number of workers on project: 4
+----------------
+
+Tick 21:
+Number of workers on project: 4
+----------------
+
+Tick 22:
+	Finished: 8
+Number of workers on project: 0
+----------------
+
+Total time was: 22
+
+Task: 0
+	Name of the task: null
+	Estimated time: 0. Estimated staff: 0
+	Estimated slack: 0
+	Earliest starting time: 0. Latest starting time: 0
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		5
+
+Task: 5
+	Name of the task: Build-foundation
+	Estimated time: 4. Estimated staff: 2
+	Estimated slack: 0
+	Earliest starting time: 0. Latest starting time: 0
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		1 6
+
+Task: 1
+	Name of the task: Build-walls
+	Estimated time: 4. Estimated staff: 2
+	Estimated slack: 0
+	Earliest starting time: 4. Latest starting time: 4
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		2 3
+
+Task: 2
+	Name of the task: Build-roofs
+	Estimated time: 6. Estimated staff: 4
+	Estimated slack: 0
+	Earliest starting time: 8. Latest starting time: 8
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		3 4 7
+
+Task: 3
+	Name of the task: Put-on-wallpapers
+	Estimated time: 1. Estimated staff: 2
+	Estimated slack: 5
+	Earliest starting time: 14. Latest starting time: 19
+	Tasks that depend on this task:
+		8
+
+Task: 8
+	Name of the task: Move-in
+	Estimated time: 4. Estimated staff: 4
+	Estimated slack: 0
+	Earliest starting time: 18. Latest starting time: 18
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+
+
+Task: 4
+	Name of the task: Put-on-tiles
+	Estimated time: 1. Estimated staff: 3
+	Estimated slack: 3
+	Earliest starting time: 14. Latest starting time: 17
+	Tasks that depend on this task:
+
+
+Task: 7
+	Name of the task: Put-carpet-floor
+	Estimated time: 4. Estimated staff: 2
+	Estimated slack: 0
+	Earliest starting time: 14. Latest starting time: 14
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		8
+
+Task: 6
+	Name of the task: Make-floor
+	Estimated time: 2. Estimated staff: 2
+	Estimated slack: 2
+	Earliest starting time: 4. Latest starting time: 6
+	Tasks that depend on this task:
+		7
+
+=======================================================
+
+Starting task manager for: buildhouse2.txt
+This tree is circular at the chain:
+	1 <- 6 <- 3 <- 2 <- 1 <- 5 <- 0
+This tree is circular! Aborting!
+
+=======================================================
+
+Starting task manager for: buildrail.txt
+Tick 0:
+	Starting: 0
+	Starting: 9
+Number of workers on project: 10
+----------------
+
+Tick 1:
+Number of workers on project: 10
+----------------
+
+Tick 2:
+Number of workers on project: 10
+----------------
+
+Tick 3:
+	Finished: 9
+	Starting: 10
+	Starting: 11
+	Starting: 12
+	Starting: 14
+	Starting: 16
+	Starting: 17
+Number of workers on project: 56
+----------------
+
+Tick 4:
+	Finished: 11
+	Starting: 18
+	Starting: 19
+	Starting: 20
+Number of workers on project: 64
+----------------
+
+Tick 5:
+	Finished: 10
+	Starting: 2
+Number of workers on project: 70
+----------------
+
+Tick 6:
+Number of workers on project: 70
+----------------
+
+Tick 7:
+Number of workers on project: 70
+----------------
+
+Tick 8:
+Number of workers on project: 70
+----------------
+
+Tick 9:
+Number of workers on project: 70
+----------------
+
+Tick 10:
+Number of workers on project: 70
+----------------
+
+Tick 11:
+Number of workers on project: 70
+----------------
+
+Tick 12:
+	Finished: 2
+Number of workers on project: 60
+----------------
+
+Tick 13:
+Number of workers on project: 60
+----------------
+
+Tick 14:
+Number of workers on project: 60
+----------------
+
+Tick 15:
+Number of workers on project: 60
+----------------
+
+Tick 16:
+	Finished: 20
+	Starting: 23
+Number of workers on project: 61
+----------------
+
+Tick 17:
+Number of workers on project: 61
+----------------
+
+Tick 18:
+Number of workers on project: 61
+----------------
+
+Tick 19:
+Number of workers on project: 61
+----------------
+
+Tick 20:
+Number of workers on project: 61
+----------------
+
+Tick 21:
+Number of workers on project: 61
+----------------
+
+Tick 22:
+Number of workers on project: 61
+----------------
+
+Tick 23:
+Number of workers on project: 61
+----------------
+
+Tick 24:
+Number of workers on project: 61
+----------------
+
+Tick 25:
+Number of workers on project: 61
+----------------
+
+Tick 26:
+Number of workers on project: 61
+----------------
+
+Tick 27:
+Number of workers on project: 61
+----------------
+
+Tick 28:
+	Finished: 14
+	Starting: 15
+Number of workers on project: 61
+----------------
+
+Tick 29:
+	Finished: 19
+Number of workers on project: 57
+----------------
+
+Tick 30:
+Number of workers on project: 57
+----------------
+
+Tick 31:
+Number of workers on project: 57
+----------------
+
+Tick 32:
+Number of workers on project: 57
+----------------
+
+Tick 33:
+	Finished: 12
+	Starting: 13
+Number of workers on project: 57
+----------------
+
+Tick 34:
+Number of workers on project: 57
+----------------
+
+Tick 35:
+Number of workers on project: 57
+----------------
+
+Tick 36:
+Number of workers on project: 57
+----------------
+
+Tick 37:
+Number of workers on project: 57
+----------------
+
+Tick 38:
+	Finished: 16
+Number of workers on project: 45
+----------------
+
+Tick 39:
+Number of workers on project: 45
+----------------
+
+Tick 40:
+Number of workers on project: 45
+----------------
+
+Tick 41:
+Number of workers on project: 45
+----------------
+
+Tick 42:
+Number of workers on project: 45
+----------------
+
+Tick 43:
+Number of workers on project: 45
+----------------
+
+Tick 44:
+	Finished: 18
+	Starting: 21
+Number of workers on project: 46
+----------------
+
+Tick 45:
+Number of workers on project: 46
+----------------
+
+Tick 46:
+	Finished: 23
+	Starting: 26
+Number of workers on project: 48
+----------------
+
+Tick 47:
+Number of workers on project: 48
+----------------
+
+Tick 48:
+	Starting: 22
+	Finished: 15
+	Starting: 8
+	Finished: 17
+Number of workers on project: 36
+----------------
+
+Tick 49:
+Number of workers on project: 36
+----------------
+
+Tick 50:
+Number of workers on project: 36
+----------------
+
+Tick 51:
+	Finished: 13
+Number of workers on project: 24
+----------------
+
+Tick 52:
+Number of workers on project: 24
+----------------
+
+Tick 53:
+Number of workers on project: 24
+----------------
+
+Tick 54:
+Number of workers on project: 24
+----------------
+
+Tick 55:
+Number of workers on project: 24
+----------------
+
+Tick 56:
+Number of workers on project: 24
+----------------
+
+Tick 57:
+Number of workers on project: 24
+----------------
+
+Tick 58:
+Number of workers on project: 24
+----------------
+
+Tick 59:
+	Finished: 21
+	Starting: 24
+Number of workers on project: 26
+----------------
+
+Tick 60:
+	Finished: 8
+	Starting: 3
+Number of workers on project: 29
+----------------
+
+Tick 61:
+	Finished: 3
+Number of workers on project: 19
+----------------
+
+Tick 62:
+Number of workers on project: 19
+----------------
+
+Tick 63:
+Number of workers on project: 19
+----------------
+
+Tick 64:
+	Finished: 22
+	Starting: 25
+Number of workers on project: 21
+----------------
+
+Tick 65:
+Number of workers on project: 21
+----------------
+
+Tick 66:
+	Finished: 26
+	Starting: 31
+Number of workers on project: 21
+----------------
+
+Tick 67:
+Number of workers on project: 21
+----------------
+
+Tick 68:
+Number of workers on project: 21
+----------------
+
+Tick 69:
+Number of workers on project: 21
+----------------
+
+Tick 70:
+Number of workers on project: 21
+----------------
+
+Tick 71:
+Number of workers on project: 21
+----------------
+
+Tick 72:
+Number of workers on project: 21
+----------------
+
+Tick 73:
+Number of workers on project: 21
+----------------
+
+Tick 74:
+Number of workers on project: 21
+----------------
+
+Tick 75:
+Number of workers on project: 21
+----------------
+
+Tick 76:
+Number of workers on project: 21
+----------------
+
+Tick 77:
+Number of workers on project: 21
+----------------
+
+Tick 78:
+	Finished: 31
+Number of workers on project: 14
+----------------
+
+Tick 79:
+Number of workers on project: 14
+----------------
+
+Tick 80:
+Number of workers on project: 14
+----------------
+
+Tick 81:
+Number of workers on project: 14
+----------------
+
+Tick 82:
+Number of workers on project: 14
+----------------
+
+Tick 83:
+Number of workers on project: 14
+----------------
+
+Tick 84:
+Number of workers on project: 14
+----------------
+
+Tick 85:
+Number of workers on project: 14
+----------------
+
+Tick 86:
+Number of workers on project: 14
+----------------
+
+Tick 87:
+Number of workers on project: 14
+----------------
+
+Tick 88:
+Number of workers on project: 14
+----------------
+
+Tick 89:
+Number of workers on project: 14
+----------------
+
+Tick 90:
+Number of workers on project: 14
+----------------
+
+Tick 91:
+Number of workers on project: 14
+----------------
+
+Tick 92:
+Number of workers on project: 14
+----------------
+
+Tick 93:
+Number of workers on project: 14
+----------------
+
+Tick 94:
+Number of workers on project: 14
+----------------
+
+Tick 95:
+Number of workers on project: 14
+----------------
+
+Tick 96:
+Number of workers on project: 14
+----------------
+
+Tick 97:
+Number of workers on project: 14
+----------------
+
+Tick 98:
+Number of workers on project: 14
+----------------
+
+Tick 99:
+Number of workers on project: 14
+----------------
+
+Tick 100:
+Number of workers on project: 14
+----------------
+
+Tick 101:
+Number of workers on project: 14
+----------------
+
+Tick 102:
+Number of workers on project: 14
+----------------
+
+Tick 103:
+Number of workers on project: 14
+----------------
+
+Tick 104:
+Number of workers on project: 14
+----------------
+
+Tick 105:
+Number of workers on project: 14
+----------------
+
+Tick 106:
+Number of workers on project: 14
+----------------
+
+Tick 107:
+Number of workers on project: 14
+----------------
+
+Tick 108:
+Number of workers on project: 14
+----------------
+
+Tick 109:
+Number of workers on project: 14
+----------------
+
+Tick 110:
+Number of workers on project: 14
+----------------
+
+Tick 111:
+Number of workers on project: 14
+----------------
+
+Tick 112:
+Number of workers on project: 14
+----------------
+
+Tick 113:
+Number of workers on project: 14
+----------------
+
+Tick 114:
+Number of workers on project: 14
+----------------
+
+Tick 115:
+Number of workers on project: 14
+----------------
+
+Tick 116:
+Number of workers on project: 14
+----------------
+
+Tick 117:
+Number of workers on project: 14
+----------------
+
+Tick 118:
+Number of workers on project: 14
+----------------
+
+Tick 119:
+	Finished: 24
+	Starting: 4
+Number of workers on project: 13
+----------------
+
+Tick 120:
+Number of workers on project: 13
+----------------
+
+Tick 121:
+Number of workers on project: 13
+----------------
+
+Tick 122:
+Number of workers on project: 13
+----------------
+
+Tick 123:
+Number of workers on project: 13
+----------------
+
+Tick 124:
+	Starting: 27
+	Finished: 25
+	Starting: 5
+Number of workers on project: 22
+----------------
+
+Tick 125:
+Number of workers on project: 22
+----------------
+
+Tick 126:
+Number of workers on project: 22
+----------------
+
+Tick 127:
+Number of workers on project: 22
+----------------
+
+Tick 128:
+Number of workers on project: 22
+----------------
+
+Tick 129:
+Number of workers on project: 22
+----------------
+
+Tick 130:
+Number of workers on project: 22
+----------------
+
+Tick 131:
+Number of workers on project: 22
+----------------
+
+Tick 132:
+Number of workers on project: 22
+----------------
+
+Tick 133:
+Number of workers on project: 22
+----------------
+
+Tick 134:
+	Finished: 4
+Number of workers on project: 16
+----------------
+
+Tick 135:
+Number of workers on project: 16
+----------------
+
+Tick 136:
+	Finished: 5
+Number of workers on project: 10
+----------------
+
+Tick 137:
+Number of workers on project: 10
+----------------
+
+Tick 138:
+Number of workers on project: 10
+----------------
+
+Tick 139:
+Number of workers on project: 10
+----------------
+
+Tick 140:
+Number of workers on project: 10
+----------------
+
+Tick 141:
+Number of workers on project: 10
+----------------
+
+Tick 142:
+Number of workers on project: 10
+----------------
+
+Tick 143:
+Number of workers on project: 10
+----------------
+
+Tick 144:
+Number of workers on project: 10
+----------------
+
+Tick 145:
+Number of workers on project: 10
+----------------
+
+Tick 146:
+Number of workers on project: 10
+----------------
+
+Tick 147:
+Number of workers on project: 10
+----------------
+
+Tick 148:
+Number of workers on project: 10
+----------------
+
+Tick 149:
+	Finished: 27
+	Starting: 28
+	Starting: 29
+Number of workers on project: 20
+----------------
+
+Tick 150:
+Number of workers on project: 20
+----------------
+
+Tick 151:
+Number of workers on project: 20
+----------------
+
+Tick 152:
+Number of workers on project: 20
+----------------
+
+Tick 153:
+Number of workers on project: 20
+----------------
+
+Tick 154:
+Number of workers on project: 20
+----------------
+
+Tick 155:
+Number of workers on project: 20
+----------------
+
+Tick 156:
+Number of workers on project: 20
+----------------
+
+Tick 157:
+Number of workers on project: 20
+----------------
+
+Tick 158:
+Number of workers on project: 20
+----------------
+
+Tick 159:
+Number of workers on project: 20
+----------------
+
+Tick 160:
+Number of workers on project: 20
+----------------
+
+Tick 161:
+Number of workers on project: 20
+----------------
+
+Tick 162:
+Number of workers on project: 20
+----------------
+
+Tick 163:
+Number of workers on project: 20
+----------------
+
+Tick 164:
+Number of workers on project: 20
+----------------
+
+Tick 165:
+Number of workers on project: 20
+----------------
+
+Tick 166:
+Number of workers on project: 20
+----------------
+
+Tick 167:
+Number of workers on project: 20
+----------------
+
+Tick 168:
+Number of workers on project: 20
+----------------
+
+Tick 169:
+Number of workers on project: 20
+----------------
+
+Tick 170:
+Number of workers on project: 20
+----------------
+
+Tick 171:
+Number of workers on project: 20
+----------------
+
+Tick 172:
+Number of workers on project: 20
+----------------
+
+Tick 173:
+Number of workers on project: 20
+----------------
+
+Tick 174:
+Number of workers on project: 20
+----------------
+
+Tick 175:
+Number of workers on project: 20
+----------------
+
+Tick 176:
+Number of workers on project: 20
+----------------
+
+Tick 177:
+Number of workers on project: 20
+----------------
+
+Tick 178:
+Number of workers on project: 20
+----------------
+
+Tick 179:
+	Finished: 28
+Number of workers on project: 10
+----------------
+
+Tick 180:
+Number of workers on project: 10
+----------------
+
+Tick 181:
+Number of workers on project: 10
+----------------
+
+Tick 182:
+Number of workers on project: 10
+----------------
+
+Tick 183:
+Number of workers on project: 10
+----------------
+
+Tick 184:
+Number of workers on project: 10
+----------------
+
+Tick 185:
+Number of workers on project: 10
+----------------
+
+Tick 186:
+	Starting: 1
+	Starting: 6
+	Starting: 7
+	Starting: 30
+	Finished: 29
+Number of workers on project: 29
+----------------
+
+Tick 187:
+Number of workers on project: 29
+----------------
+
+Tick 188:
+Number of workers on project: 29
+----------------
+
+Tick 189:
+Number of workers on project: 29
+----------------
+
+Tick 190:
+Number of workers on project: 29
+----------------
+
+Tick 191:
+Number of workers on project: 29
+----------------
+
+Tick 192:
+Number of workers on project: 29
+----------------
+
+Tick 193:
+Number of workers on project: 29
+----------------
+
+Tick 194:
+Number of workers on project: 29
+----------------
+
+Tick 195:
+Number of workers on project: 29
+----------------
+
+Tick 196:
+Number of workers on project: 29
+----------------
+
+Tick 197:
+Number of workers on project: 29
+----------------
+
+Tick 198:
+Number of workers on project: 29
+----------------
+
+Tick 199:
+Number of workers on project: 29
+----------------
+
+Tick 200:
+Number of workers on project: 29
+----------------
+
+Tick 201:
+Number of workers on project: 29
+----------------
+
+Tick 202:
+Number of workers on project: 29
+----------------
+
+Tick 203:
+Number of workers on project: 29
+----------------
+
+Tick 204:
+	Finished: 7
+Number of workers on project: 23
+----------------
+
+Tick 205:
+Number of workers on project: 23
+----------------
+
+Tick 206:
+	Finished: 1
+	Finished: 30
+Number of workers on project: 6
+----------------
+
+Tick 207:
+Number of workers on project: 6
+----------------
+
+Tick 208:
+Number of workers on project: 6
+----------------
+
+Tick 209:
+Number of workers on project: 6
+----------------
+
+Tick 210:
+Number of workers on project: 6
+----------------
+
+Tick 211:
+Number of workers on project: 6
+----------------
+
+Tick 212:
+Number of workers on project: 6
+----------------
+
+Tick 213:
+	Finished: 6
+Number of workers on project: 0
+----------------
+
+Total time was: 213
+
+Task: 0
+	Name of the task: null
+	Estimated time: 0. Estimated staff: 0
+	Estimated slack: 0
+	Earliest starting time: 0. Latest starting time: 0
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		9
+
+Task: 9
+	Name of the task: Setup-barrack
+	Estimated time: 3. Estimated staff: 10
+	Estimated slack: 0
+	Earliest starting time: 0. Latest starting time: 0
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		10 11 12 14 16 17
+
+Task: 10
+	Name of the task: Prepare-storage
+	Estimated time: 2. Estimated staff: 4
+	Estimated slack: 43
+	Earliest starting time: 3. Latest starting time: 46
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		2
+
+Task: 2
+	Name of the task: Install-railing
+	Estimated time: 7. Estimated staff: 10
+	Estimated slack: -5
+	Earliest starting time: 5. Latest starting time: 0
+	Tasks that depend on this task:
+
+
+Task: 11
+	Name of the task: Rig-ramspace-reinforcing
+	Estimated time: 1. Estimated staff: 4
+	Estimated slack: 44
+	Earliest starting time: 3. Latest starting time: 47
+	Tasks that depend on this task:
+		18 19 20
+
+Task: 18
+	Name of the task: Make-armouring-tower-1
+	Estimated time: 40. Estimated staff: 4
+	Estimated slack: -4
+	Earliest starting time: 4. Latest starting time: 0
+	Tasks that depend on this task:
+		21
+
+Task: 21
+	Name of the task: Encase-and-armour-tower-1
+	Estimated time: 15. Estimated staff: 5
+	Estimated slack: -44
+	Earliest starting time: 44. Latest starting time: 0
+	Tasks that depend on this task:
+		24
+
+Task: 24
+	Name of the task: Cast-tower-1
+	Estimated time: 60. Estimated staff: 7
+	Estimated slack: 0
+	Earliest starting time: 59. Latest starting time: 59
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		4 27
+
+Task: 4
+	Name of the task: Paint-tower-1-with-arch
+	Estimated time: 15. Estimated staff: 6
+	Estimated slack: 10
+	Earliest starting time: 119. Latest starting time: 129
+	Tasks that depend on this task:
+
+
+Task: 27
+	Name of the task: Stretch-two-maincables
+	Estimated time: 25. Estimated staff: 10
+	Estimated slack: 0
+	Earliest starting time: 124. Latest starting time: 124
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		28 29
+
+Task: 28
+	Name of the task: Build-truss-1-with-rods
+	Estimated time: 30. Estimated staff: 10
+	Estimated slack: 7
+	Earliest starting time: 149. Latest starting time: 156
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		1 6 7 30
+
+Task: 1
+	Name of the task: Install-pavement
+	Estimated time: 20. Estimated staff: 10
+	Estimated slack: 7
+	Earliest starting time: 186. Latest starting time: 193
+	Tasks that depend on this task:
+
+
+Task: 6
+	Name of the task: Paint-trusses
+	Estimated time: 27. Estimated staff: 6
+	Estimated slack: 0
+	Earliest starting time: 186. Latest starting time: 186
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+
+
+Task: 7
+	Name of the task: Paint-cables-and-rods
+	Estimated time: 18. Estimated staff: 6
+	Estimated slack: 9
+	Earliest starting time: 186. Latest starting time: 195
+	Tasks that depend on this task:
+
+
+Task: 30
+	Name of the task: Cast-lane-on-truss
+	Estimated time: 20. Estimated staff: 7
+	Estimated slack: 7
+	Earliest starting time: 186. Latest starting time: 193
+	Tasks that depend on this task:
+		31
+
+Task: 31
+	Name of the task: Polish-lane-on-arch
+	Estimated time: 12. Estimated staff: 7
+	Estimated slack: -66
+	Earliest starting time: 66. Latest starting time: 0
+	Tasks that depend on this task:
+
+
+Task: 29
+	Name of the task: Build-truss-2-with-rods
+	Estimated time: 37. Estimated staff: 10
+	Estimated slack: 0
+	Earliest starting time: 149. Latest starting time: 149
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		1 6 7 30
+
+Task: 19
+	Name of the task: Make-armouring-tower-2
+	Estimated time: 25. Estimated staff: 4
+	Estimated slack: -4
+	Earliest starting time: 4. Latest starting time: 0
+	Tasks that depend on this task:
+		22
+
+Task: 22
+	Name of the task: Encase-and-armour-tower-2
+	Estimated time: 16. Estimated staff: 5
+	Estimated slack: 0
+	Earliest starting time: 48. Latest starting time: 48
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		25
+
+Task: 25
+	Name of the task: Cast-tower-2
+	Estimated time: 60. Estimated staff: 7
+	Estimated slack: 0
+	Earliest starting time: 64. Latest starting time: 64
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		5 27
+
+Task: 5
+	Name of the task: Paint-tower-2
+	Estimated time: 12. Estimated staff: 6
+	Estimated slack: 13
+	Earliest starting time: 124. Latest starting time: 137
+	Tasks that depend on this task:
+
+
+Task: 20
+	Name of the task: Make-armouring-arch
+	Estimated time: 12. Estimated staff: 4
+	Estimated slack: -4
+	Earliest starting time: 4. Latest starting time: 0
+	Tasks that depend on this task:
+		23
+
+Task: 23
+	Name of the task: Encase-and-armour-arch
+	Estimated time: 30. Estimated staff: 5
+	Estimated slack: -16
+	Earliest starting time: 16. Latest starting time: 0
+	Tasks that depend on this task:
+		26
+
+Task: 26
+	Name of the task: Cast-arch
+	Estimated time: 20. Estimated staff: 7
+	Estimated slack: -46
+	Earliest starting time: 46. Latest starting time: 0
+	Tasks that depend on this task:
+		31
+
+Task: 12
+	Name of the task: Build-tunnel
+	Estimated time: 30. Estimated staff: 12
+	Estimated slack: 15
+	Earliest starting time: 3. Latest starting time: 18
+	Tasks that depend on this task:
+		13
+
+Task: 13
+	Name of the task: Clean-tunnel
+	Estimated time: 18. Estimated staff: 12
+	Estimated slack: 0
+	Earliest starting time: 33. Latest starting time: 33
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		8
+
+Task: 8
+	Name of the task: Put-lane-tunnel-and-intersection
+	Estimated time: 12. Estimated staff: 7
+	Estimated slack: 0
+	Earliest starting time: 48. Latest starting time: 48
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		3 31
+
+Task: 3
+	Name of the task: Install-ticketmachine
+	Estimated time: 1. Estimated staff: 10
+	Estimated slack: -60
+	Earliest starting time: 60. Latest starting time: 0
+	Tasks that depend on this task:
+
+
+Task: 14
+	Name of the task: Build-intersection
+	Estimated time: 25. Estimated staff: 12
+	Estimated slack: 20
+	Earliest starting time: 3. Latest starting time: 23
+	Tasks that depend on this task:
+		15
+
+Task: 15
+	Name of the task: Clean-intersection
+	Estimated time: 20. Estimated staff: 12
+	Estimated slack: 0
+	Earliest starting time: 28. Latest starting time: 28
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		8
+
+Task: 16
+	Name of the task: Build-towerfoundation-1
+	Estimated time: 35. Estimated staff: 12
+	Estimated slack: 10
+	Earliest starting time: 3. Latest starting time: 13
+	Tasks that depend on this task:
+		21
+
+Task: 17
+	Name of the task: Build-towerfoundation-2
+	Estimated time: 45. Estimated staff: 12
+	Estimated slack: 0
+	Earliest starting time: 3. Latest starting time: 3
+	TASK IS CRITICAL!!!
+	Tasks that depend on this task:
+		22
