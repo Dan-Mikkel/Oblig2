@@ -4,12 +4,13 @@ public class Task {
 
   private int id, estimatedTime, estimatedStaff;
   private String name;
-  private int earliestStart = -1, latestStart = -1;
+  private int earliestStart = 0, latestStart = 0;
   private LinkedList<Task> dependencyEdges, outEdges;
   private boolean completedStatus = false, canStart = false;
   private int[] dependencies;
   private boolean hasBeenVisited = false;
   private boolean hasBeenStarted = false;
+  private boolean isCritical = false;
 
   public Task(int id) {
 
@@ -19,6 +20,7 @@ public class Task {
     this.name = null;
     this.dependencyEdges = new LinkedList<Task>();
     this.outEdges = new LinkedList<Task>();
+    this.isCritical = true;
 
   }
 
@@ -81,11 +83,18 @@ public class Task {
 
   public boolean canStart() {return this.canStart;}
 
-  public boolean isCritical() {return (this.getSlack() == 0);}
+  public boolean isCritical() {return this.isCritical;}
+
+  public void setCritical() {this.isCritical = true;}
 
   public void visit() {this.hasBeenVisited = true;}
 
-  public void leave() {this.hasBeenVisited = false;}
+  public void leave() {
+
+    this.hasBeenVisited = false;
+    for (Task t : this.getOutEdges()) t.leave();
+
+  }
 
   public boolean hasBeenVisited() {return this.hasBeenVisited;}
 
@@ -112,6 +121,39 @@ public class Task {
     } else {
 
       return;
+
+    }
+
+  }
+
+  public void printAllInfo() {
+
+    if (this.hasBeenVisited()) {
+
+      return;
+
+    }
+
+    this.visit();
+    System.out.println("Task: " + this.getID());
+    System.out.println("\tName of the task: " + this.getName());
+    System.out.println("\tEstimated time: " + this.getEstimatedTime() + ". Estimated staff: " + this.getEstimatedStaff());
+    System.out.println("\tEstimated slack: " + this.getSlack());
+    System.out.println("\tEarliest starting time: " + this.getEarliestStart() + ". Latest starting time: " + this.getLatestStart());
+    if (this.isCritical) System.out.println("\tTASK IS CRITICAL!!!");
+    System.out.print("\tTasks that depend on this task:\n\t\t");
+
+    for (Task t : this.getOutEdges()) {
+
+      System.out.print(t.getID() + " ");
+
+    }
+
+    System.out.println("\n");
+
+    for (Task t : this.getOutEdges()) {
+
+      t.printAllInfo();
 
     }
 

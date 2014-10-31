@@ -34,7 +34,7 @@ public class TaskScanner {
         //Scan a line
         String scannedLine = fileScanner.nextLine();
 
-        System.out.println("Line scanned: " + scannedLine);
+        //System.out.println("Line scanned: " + scannedLine);
 
         //Split the line by it's whitespaces
         String[] splitLine = scannedLine.split("\\s+");
@@ -117,7 +117,7 @@ public class TaskScanner {
       }
 
       //Printout for testing
-      for (int i = 0; i < allTasks.length; i++) {
+      /*for (int i = 0; i < allTasks.length; i++) {
 
         Task t = allTasks[i];
         System.out.println("TaskID: " + t.getID() + ". Task name: " + t.getName()+ ". Dependencies:");
@@ -131,7 +131,7 @@ public class TaskScanner {
         }
         System.out.println("\n");
 
-      }
+      }*/
 
     } catch (InputMismatchException ex) {
 

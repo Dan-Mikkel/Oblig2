@@ -20,15 +20,22 @@ public class TaskManager {
 
     }
 
+    taskTree.leave();
+
+    int totalTime = this.findCriticalPath(this.taskTree);
     optimizeTasksOnTime(taskTree);
 
-    for (int i = 0; i < numberOfNodes; i++) {
+    int i = 0;
+    while (i <= totalTime) {
 
-      System.out.println("Tick: " + i);
-      taskTree.tick(i);
-      System.out.println();
+      System.out.println("Tick " + i + ":");
+      taskTree.tick(i++);
+
+      System.out.println("----------------\n");
 
     }
+
+    System.out.println("Total time was: " + totalTime + "\n");
 
   }
 
@@ -39,6 +46,7 @@ public class TaskManager {
 
     if (taskTree.hasBeenVisited()) {
         System.out.print("This tree is circular at the chain:\n\t" + taskTree.getID());
+        taskTree.leave();
         return true;
     }
 
@@ -55,6 +63,64 @@ public class TaskManager {
   }
 
   public void optimizeTasksOnTime(Task taskTree) {
+
+    if (taskTree == null) return;
+
+    if (taskTree.getID() == 0) {
+
+      for (Task t : taskTree.getOutEdges()) {
+
+        optimizeTasksOnTime(t);
+
+      }
+
+    }
+
+    int maxTime = 0, maxStart = 0;
+    for (Task t : taskTree.getDependencyEdges()) {
+
+      int time = t.getEstimatedTime();
+      int start = t.getEarliestStart();
+
+      //Nope
+      /*if (t.isCritical()) {
+
+        maxTime = t.getEstimatedTime();
+        maxStart = t.getEarliestStart();
+
+      }*/
+
+      if (time >= maxTime) {
+
+        maxTime = time;
+        maxStart = start;
+
+      }
+
+    }
+
+    taskTree.setEarliestStart(maxTime+maxStart);
+    Task[] taskLevel = taskTree.getOutEdges();
+    Task criticalTask = null;
+
+    for (Task t : taskLevel) {
+
+      optimizeTasksOnTime(t);
+      if (t.isCritical()) criticalTask = t;
+
+    }
+
+    if (criticalTask == null) return;
+
+    for (Task t : taskLevel) {
+
+      t.setLatestStart(t.getEarliestStart() + (criticalTask.getEstimatedTime()-t.getEstimatedTime()));
+
+    }
+
+  }
+
+  public void optimizeTasksOnTimeOLD(Task taskTree) {
 
     if (taskTree == null) return;
 
@@ -83,7 +149,7 @@ public class TaskManager {
 
       t.setEarliestStart(maxTimeDependencies+earliestStartofDependency);
 
-      optimizeTasksOnTime(t);
+      optimizeTasksOnTimeOLD(t);
 
     }
 
@@ -125,9 +191,9 @@ public class TaskManager {
 
   }
 
-  public Task[] findCriticalPath(Task taskTree) {
+  public int findCriticalPath(Task taskTree) {
 
-    if (taskTree == null) return null;
+    if (taskTree == null) return 0;
 
     //Find a node that takes the longest time in the level
     Task[] taskLevel = taskTree.getOutEdges();
@@ -136,7 +202,7 @@ public class TaskManager {
 
     for (int i = 0; i < taskLevel.length; i++) {
 
-      if (taskLevel[i].getEstimatedTime() > maxTime) {
+      if (taskLevel[i].getEstimatedTime() >= maxTime) {
 
         maxTime = taskLevel[i].getEstimatedTime();
         criticalTask = taskLevel[i];
@@ -145,24 +211,24 @@ public class TaskManager {
 
     }
 
-    return joinTaskArrays(new Task[]{criticalTask},findCriticalPath(criticalTask));
+    if (taskLevel == null || criticalTask == null) return 0;
 
-  }
 
-  private Task[] joinTaskArrays(Task[] array1, Task[] array2) {
 
-    Task[] newArray = Arrays.copyOf(array1, array1.length+array2.length);
+    criticalTask.setCritical();
+    return criticalTask.getEstimatedTime() + findCriticalPath(criticalTask);
 
-    for (int i = 0; i < array2.length; i++) {
-
-      newArray[i+array1.length] = array2[i];
-
-    }
-
-    return newArray;
+    //return joinTaskArrays(new Task[]{criticalTask},findCriticalPath(criticalTask));
 
   }
 
   public Task getTaskTree() {return this.taskTree;}
+
+  public void printAllTasks() {
+
+    this.taskTree.printAllInfo();
+    this.taskTree.leave();
+
+  }
 
 }
